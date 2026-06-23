@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DassiePrint - Controle de Pedidos</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="menu">
+
+<h1>🪵 DassiePrint</h1>
+
+<p>Controle de Pedidos</p>
+
+</div>
+
+<div class="dashboard">
+
+<div class="card">
+
+<h2 id="totalPedidos">0</h2>
+
+<p>Pedidos</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="totalReceber">R$0,00</h2>
+
+<p>Falta Receber</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="totalPago">R$0,00</h2>
+
+<p>Recebido</p>
+
+</div>
+
+<div class="card">
+
+<h2 id="producao">0</h2>
+
+<p>Produção</p>
+
+</div>
+
+</div>
+
+<div class="cadastro">
+
+<h2>Novo Pedido</h2>
+
+<input
+type="text"
+id="cliente"
+placeholder="Nome do Cliente">
+
+<input
+type="text"
+id="telefone"
+placeholder="Telefone">
+
+<input
+type="text"
+id="modelo"
+placeholder="Modelo do Porta Chaves">
+
+<input
+type="number"
+id="valor"
+placeholder="Valor">
+
+<input
+type="number"
+id="pago"
+placeholder="Valor Pago">
+
+<select id="statusPagamento">
+
+<option>Pendente</option>
+
+<option>Parcial</option>
+
+<option>Pago</option>
+
+</select>
+
+<select id="statusPedido">
+
+<option>Recebido</option>
+
+<option>Produção</option>
+
+<option>Pronto</option>
+
+<option>Entregue</option>
+
+</select>
+
+<textarea
+id="obs"
+placeholder="Observações"></textarea>
+
+<button onclick="salvarPedido()">
+
+Salvar Pedido
+
+</button>
+
+</div>
+
+<div class="lista">
+
+<h2>Fila de Produção</h2>
+
+<input
+type="text"
+id="pesquisa"
+placeholder="Pesquisar cliente..."
+onkeyup="pesquisar()">
+
+<div id="pedidos">
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
